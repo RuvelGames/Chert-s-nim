@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Chert_s_nim.Models.EngineData>
+@{
+    ViewBag.Title = "Все двигатели";
+}
+
+<a asp-action="Create">Добавить двигатель</a>
+<table class="table">
+    <tr><td>Название</td><td>Мощность</td><td>Цена</td></tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Name</td>
+            <td>@item.Power</td>
+            <td>@item.Price</td>
+            <td>
+                <a asp-action="Edit" asp-controller="Home" asp-route-id="@item.Id">Изменить</a>
+            </td>
+            <td>
+                <form asp-controller="Home" asp-action="Delete" method="post" asp-route-id="@item.Id">
+                    <input type="submit" value="Удалить" />
+                </form>
+            </td>
+        </tr>
+    }
+</table>

@@ -1,0 +1,20 @@
+﻿@model Chert_s_nim.Models.EngineData
+
+<h2>Редактирование двигателя</h2>
+<form asp-action="edit" asp-controller="home" asp-route-id="@Model.Id">
+    <p>
+        <label asp-for="Name">Название</label><br />
+        <input type="text" asp-for="Name" />
+    </p>
+    <p>
+        <label asp-for="Power">Мощность</label><br />
+        <input type="number" asp-for="Power" />
+    </p>
+    <p>
+        <label asp-for="Price">Цена</label><br />
+        <input type="number" asp-for="Price" />
+    </p>
+    <p>
+        <input type="submit" value="Сохранить" />
+    </p>
+</form>

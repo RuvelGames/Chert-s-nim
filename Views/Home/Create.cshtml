@@ -1,0 +1,21 @@
+﻿@model Chert_s_nim.Models.EngineData
+@{
+    ViewBag.Title = "Добавление двигателя";
+}
+<form asp-action="create" asp-controller="home">
+    <div class="form-group">
+        <label asp-for="Name" class="control-label">Название</label>
+        <input type="text" asp-for="Name" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Power" class="control-label">Мощность</label>
+        <input type="number" asp-for="Power" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Price" class="control-label">Цена</label>
+        <input type="number" asp-for="Price" class="form-control" />
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Отправить" class="btn btn-default" />
+    </div>
+</form>
